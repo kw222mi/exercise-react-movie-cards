@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
+body {
+    --bgcolor: #43423E;
+}
+
+
 *,
 *:before,
 *:after {
@@ -8,7 +13,7 @@
 }
 
 body {
-    background: #43423E;
+    background: var(--bgcolor)
 }
 
 a {
@@ -28,7 +33,7 @@ a:hover {
 
 .container {
     margin: 0 auto;
-    width: 780px;
+    width: 380px;
     height: 640px;
     background: #F0F0ED;
     border-radius: 5px;
@@ -55,8 +60,8 @@ a:hover {
     top: 0;
     left: 0;
     background: red;
-    background-color: #43423E;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");
+    background-color: var(--bgcolor);
+    /*background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");*/
     z-index: -1;
     transform: skewY(-2.2deg);
     transform-origin: 0 0;
@@ -73,49 +78,15 @@ a:hover {
 }
 
 .details {
-
     padding: 190px 0 0 280px;
-
-
-    .title1 {
-        color: white;
-        font-size: 44px;
-        margin-bottom: 13px;
-        position: relative;
-
-        span {
-            position: absolute;
-            top: 3px;
-            margin-left: 12px;
-            background: #C4AF3D;
-            border-radius: 5px;
-            color: #544C21;
-            font-size: 14px;
-            padding: 0px 4px;
-
-        }
+    
     }
 
-    .title2 {
-        color: #C7C1BA;
-        font-size: 23px;
-        font-weight: 300;
-        margin-bottom: 15px;
-    }
-
-
-    .likes {
-        margin-left: 24px;
-    }
-
-
-    .likes:before {
-        content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
-        position: relative;
-        top: 2px;
-        padding-right: 7px;
-    }
-
+.title1 {
+    color: white;
+    font-size: 44px;
+    margin-bottom: 13px;
+    position: relative;
 }
 
 .description {
@@ -125,6 +96,10 @@ a:hover {
     font-size: 16px;
     line-height: 26px;
     color: #B1B0AC;
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
 
 }
 
@@ -138,6 +113,7 @@ a:hover {
 
 .tag {
     background: white;
+    width: fit-content;
     border-radius: 10px;
     padding: 3px 8px;
     font-size: 14px;
@@ -157,24 +133,6 @@ a:hover {
     width: 480px;
     float: left;
 }
-
-.avatars {
-    margin-top: 23px;
-
-    img {
-        cursor: pointer;
-    }
-
-    img:hover {
-        opacity: 0.6;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-}
-
-
 
 fieldset,
 label {

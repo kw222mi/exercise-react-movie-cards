@@ -6,6 +6,7 @@ const AddMovie = (props) => {
     const [rating, setRating] = useState ("")
     const [genre, setGenre] = useState ("")
     const [description, setDescription] = useState ("")
+    const [image, setImage] = useState ("")
 
     function handleTitle(event: ChangeEvent<HTMLInputElement>): void {
         console.log(event.target.value)
@@ -20,6 +21,11 @@ const AddMovie = (props) => {
       function handleGenre(event: ChangeEvent<HTMLSelectElement>): void {
          console.log(event.target.value)
          setGenre(event.target.value)
+    }
+
+     function handleImage(event: ChangeEvent<HTMLInputElement>): void {
+         console.log(event.target.value)
+         setImage(event.target.value)
     }
 
     function handleDescription(event: ChangeEvent<HTMLTextAreaElement>): void {
@@ -37,11 +43,11 @@ const AddMovie = (props) => {
       title,
       rating,
       genre,
+      image,
       description,
     };
 
-  
-     
+
 
     return ( 
         <>
@@ -67,6 +73,9 @@ const AddMovie = (props) => {
                     <option value="horror">Horror</option>
                     <option value="Science fiction">Science fiction</option>
                 </select>
+
+                  <label>Image </label>
+                <input type="text" id="image" value={image} onChange= {handleImage} ></input>
                 
                 <label>Description</label>
                 <textarea placeholder="Descripton" value={description} onChange= {handleDescription}></textarea>

@@ -1,21 +1,20 @@
 import MovieCard from "./MovieCard";
+import { IMovie } from "./MovieCard";
 
-const MovieList = (props) => {
+interface IMovieListProps {
+  movieArray:IMovie[]
+}
 
-    
+const MovieList = (props:IMovieListProps) => {
     return ( 
         <>
-        <div>
-              
-      {props.movieArray.map((movie) => {
-        return (
-         <MovieCard title={movie.title} rating={movie.rating} description={movie.description}  genre={movie.genre}/>
-        );
-      })}
-        </div>
-     
-    
-       
+          <div className="movie-list"> 
+            {props.movieArray.map((movie:IMovie) => {
+              return (
+              <MovieCard title={movie.title} rating={movie.rating} description={movie.description}  genre={movie.genre} image={movie.image}/>
+              );
+            })}
+          </div>
         </>
      );
 }
