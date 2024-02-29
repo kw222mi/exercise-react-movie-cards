@@ -1,29 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-body {
-    --bgcolor: #43423E;
-}
-
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-body {
-    background: var(--bgcolor)
-}
-
-a {
-    text-decoration: none;
-    color: #5C7FB8
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 .movie-card {
     font: 14px/22px "Lato", Arial, sans-serif;
@@ -33,7 +7,7 @@ a:hover {
 
 .container {
     margin: 0 auto;
-    width: 380px;
+    width: 250px;
     height: 640px;
     background: #F0F0ED;
     border-radius: 5px;
@@ -41,7 +15,7 @@ a:hover {
 }
 
 .hero {
-    height: 342px;
+    height: 242px;
     margin: 0;
     position: relative;
     overflow: hidden;
@@ -72,9 +46,13 @@ a:hover {
 
 .cover {
     position: absolute;
-    top: 160px;
-    left: 40px;
+    top: 60px;
+    left: 30px;
     z-index: 2;
+}
+
+img {
+    height: 280px;
 }
 
 .details {
@@ -83,23 +61,24 @@ a:hover {
     }
 
 .title1 {
-    color: white;
-    font-size: 44px;
+    color: #A9A8A3;
+    font-size: 2rem;
     margin-bottom: 13px;
     position: relative;
+    
 }
 
 .description {
-
     bottom: 0px;
     height: 200px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 26px;
-    color: #B1B0AC;
+    color:#A9A8A3;
     padding-top: 7rem;
     display: flex;
     flex-direction: column;
-    padding-left: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
 }
 

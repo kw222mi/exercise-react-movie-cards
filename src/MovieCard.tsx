@@ -31,10 +31,9 @@ const MovieCard = (props:IMovie) => {
         <>
     <div className="movie-card">
       <div className="container">
-        <a href="#"><img src={props.image} alt="cover" className="cover" /></a> 
+        <img src={props.image} alt="cover" className="cover" />
         <div className="hero">      
-        <div className="details">        
-        </div> 
+        
     </div>
     <div className="description">
         <span className="tag">{props.genre}</span>

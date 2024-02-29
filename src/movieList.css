@@ -1,4 +1,5 @@
-.movie-list {
+.movie-list-container {
     display: flex;
     flex-direction: row;
+    gap:2rem;
 }

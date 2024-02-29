@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AddMovie from "./AddMovie";
 import MovieList from "./MovieList";
 import { IMovie } from "./MovieCard";
-
+import "./index.css"
 
 export function App() {
 
